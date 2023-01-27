@@ -98,7 +98,7 @@ button:active {
 .Character_sprite {
   overflow: hidden;
   top: -3px;
-  background: url(/images/characters.png);
+  background: url(/images/defaultchar.png);
 }
 .Character[data-direction="right"] .Character_sprite {
   background-position-x: 16px;
@@ -142,7 +142,7 @@ button:active {
 
 /* Coins */
 .Coin_sprite {
-  background: url(/images/coin.png) no-repeat no-repeat;
+  background: url(/images/defaultcoin.png) no-repeat no-repeat;
   animation: coinFloat 0.8s linear infinite alternate-reverse;
 }
 @keyframes coinFloat {
