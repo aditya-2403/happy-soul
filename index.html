@@ -1,45 +1,47 @@
 <html>
-  <head>
-    <title>Happy Souls</title>
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="preconnect" href="https://fonts.gstatic.com">
-    <link href="https://fonts.googleapis.com/css2?family=Source+Sans+Pro:wght@400;700&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="/styles.css" type="text/css">
-  </head>
-  <body>
 
-    <div class="game-container">
+<head>
+  <title>Happy Souls</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="preconnect" href="https://fonts.gstatic.com">
+  <link href="https://fonts.googleapis.com/css2?family=Source+Sans+Pro:wght@400;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="/styles.css" type="text/css">
+</head>
+
+<body>
+
+  <div class="game-container">
+  </div>
+  <div class="player-info">
+    <div>
+      <label for="player-name">Your Name</label>
+      <input id="player-name" maxlength="10" type="text" />
     </div>
-    <div class="player-info">
-      <div>
-        <label for="player-name">Your Name</label>
-        <input id="player-name" maxlength="10" type="text" />
-      </div>
-      <div>
-        <button id="player-color">Change Avatar</button>
-      </div>
+    <div>
+      <button id="player-color">Change Avatar</button>
     </div>
+  </div>
 
-    <script src="https://www.gstatic.com/firebasejs/8.10.1/firebase-app.js"></script>
-    <script src="https://www.gstatic.com/firebasejs/8.10.1/firebase-auth.js"></script>
-    <script src="https://www.gstatic.com/firebasejs/8.10.1/firebase-database.js"></script>
-    
-
-    <script>
-      const firebaseConfig = {
-          apiKey: "AIzaSyBFdEvyJRlVM2bTXByBRullD5bH5jhLocU",
-          authDomain: "capstone-project-3873a.firebaseapp.com",
-          databaseURL: "https://capstone-project-3873a-default-rtdb.asia-southeast1.firebasedatabase.app",
-          projectId: "capstone-project-3873a",
-          storageBucket: "capstone-project-3873a.appspot.com",
-          messagingSenderId: "967252113266",
-          appId: "1:967252113266:web:7d7bdfc02b974d90edcfeb"
-        };
-      firebase.initializeApp(firebaseConfig);
-    </script>
+  <script src="https://www.gstatic.com/firebasejs/8.10.1/firebase-app.js"></script>
+  <script src="https://www.gstatic.com/firebasejs/8.10.1/firebase-auth.js"></script>
+  <script src="https://www.gstatic.com/firebasejs/8.10.1/firebase-database.js"></script>
 
 
-    <script src="/KeyPressListener.js"></script>
-    <script src="/app.js"></script>
-  </body>
+  <script>
+    const firebaseConfig = {
+      apiKey: "AIzaSyDZxlSTwymhIcqBV5Mo0MSa2zI1wBDMplE",
+      authDomain: "capstone-db-b0325.firebaseapp.com",
+      projectId: "capstone-db-b0325",
+      storageBucket: "capstone-db-b0325.appspot.com",
+      messagingSenderId: "117616047207",
+      appId: "1:117616047207:web:ef6007cfcf7cdd6c14d0c2"
+    };
+    firebase.initializeApp(firebaseConfig);
+  </script>
+
+
+  <script src="/KeyPressListener.js"></script>
+  <script src="/app.js"></script>
+</body>
+
 </html>

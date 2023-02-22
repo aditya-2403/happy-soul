@@ -15,9 +15,10 @@ html, body {
 
 .game-container { 
   position: relative;
-  width: 640px;
-  height: 640px;
-  background: url(/images/map2.png) no-repeat no-repeat;
+  width: 240px;
+  height: 208px;
+  background: url(/images/Imagewithobs.png) no-repeat no-repeat;
+  transform: scale(3);
   image-rendering: pixelated;
 }
 
@@ -78,7 +79,6 @@ button:active {
 }
 .Character {
   transition: transform 0.4s;
-  /* scale: 2; */
 }
 .Character.you {
   z-index: 1;
@@ -89,20 +89,23 @@ button:active {
 .Character_you-arrow {
   display: none;
   position: absolute;
-  top:-15px;
+  top:-18px;
   left: 5px;
-  width: 9px;
-  height: 9px;
-  scale: 2;
+  width: 7px;
+  height: 5px;
   background: url(/images/arrow.png) no-repeat no-repeat;
 }
 .Character_sprite {
   overflow: hidden;
   top: -3px;
-  background: url(/images/characters.png);
-  scale: 2;
+  background: url(/images/horse.PNG);
+  height: 130% !important;
+  background-position: center;
+  background-size: cover;
+  -webkit-transform: scaleX(-1);
+  transform: scaleX(-1);  
 }
-.Character[data-direction="right"] .Character_sprite {
+/* .Character[data-direction="right"] .Character_sprite {
   background-position-x: 16px;
 }
 .Character[data-color="red"] .Character_sprite {
@@ -119,35 +122,39 @@ button:active {
 }
 .Character[data-color="purple"] .Character_sprite {
   background-position-y: -80px;
-}
+} */
 .Character_shadow {
   background: url(/images/shadow.png) no-repeat no-repeat;
 }
 
 .Character_name-container {
   position: absolute;
-  top: -35px;
+  top: -12px;
   left: -5px;
   font-size: 5px;
-  padding: 1.8px 2.1px 1.8px;
+  padding: 1px 2px 1px;
   border-radius: 3px;
   background: #333;
   color: white;
   font-weight: bold;
   text-transform: uppercase;
   white-space: nowrap;
-  scale: 2.5;
 }
 .Character_coins {
-  margin-left: 1px;
   color: gold;
+  height: 50px !important;
+  width: 50px !important;
 }
 
 /* Coins */
 .Coin_sprite {
-  background: url(/images/coin.png) no-repeat no-repeat;
+  background: url(/images/coin3d.PNG) no-repeat no-repeat;
   animation: coinFloat 0.8s linear infinite alternate-reverse;
-  scale: 1.8;
+  height: 55% !important;
+  width: 55% !important;
+  object-fit: cover;
+  background-position: center;
+  background-size: cover;
 }
 @keyframes coinFloat {
   from { transform: translateY(0) }
