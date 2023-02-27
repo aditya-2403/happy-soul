@@ -4,7 +4,7 @@ const mapData = {
   minY: 1,
   maxY: 13,
   blockedSpaces: {
-    "0x0": true,
+    "4x4": true,
     "0x0": true,
     "0x0": true,
     "0x0": true,
