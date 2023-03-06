@@ -83,7 +83,7 @@ const mapData = {
     "6x11": true,
     "7x11": true,
     "1x10": true,
-    "14x8": true,
+    "14x13": true,
     
   },
 };
@@ -154,6 +154,7 @@ function isSolid(x,y) {
 function getRandomSafeSpot() {
   //We don't look things up by key here, so just return an x/y
   return randomFromArray([
+    { x: 2, y: 2 },
     { x: 2, y: 4 },
     { x: 1, y: 5 },
     { x: 2, y: 6 },
@@ -174,6 +175,12 @@ function getRandomSafeSpot() {
     { x: 8, y: 8 },
     { x: 8, y: 8 },
     { x: 11, y: 4 },
+    { x: 4, y: 13 },
+    { x: 7, y: 1 },
+    { x: 14, y: 1 },
+    { x: 14, y: 14 },
+    { x: 6, y: 14 },
+    { x: 6, y: 12 },
   ]);
 }
 
