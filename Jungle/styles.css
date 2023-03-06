@@ -126,7 +126,7 @@ button:active {
 
 .Character_name-container {
   position: absolute;
-  top: -12px;
+  top: -19px;
   left: -5px;
   font-size: 5px;
   padding: 1px 2px 1px;
@@ -148,8 +148,8 @@ button:active {
 .Coin_sprite {
   background: url(images/coin3d.PNG) no-repeat no-repeat;
   animation: coinFloat 0.8s linear infinite alternate-reverse;
-  height: 35% !important;
-  width: 35% !important;
+  height: 45% !important;
+  width: 45% !important;
   object-fit: cover;
   background-position: center;
   background-size: cover;

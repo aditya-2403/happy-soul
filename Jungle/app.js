@@ -72,19 +72,54 @@ const mapData = {
     "14x15": true,
     "15x15": true,
 
-    "1x4": true,
-    "5x3": true,
-    "6x3": true,
-    "12x3": true,
-    "12x6": true,
-    "11x6": true,
-    "10x8": true,
-    "4x8": true,
-    "6x11": true,
-    "7x11": true,
+    "5x13": true,
+    "1x8": true,
+    "1x9": true,
     "1x10": true,
-    "14x8": true,
-    
+    "1x11": true,
+    "1x12": true,
+    "1x13": true,
+    "8x14": true,
+    "10x12": true,
+    "10x8": true,
+    "10x7": true,
+    "10x7": true,
+    "14x5": true,
+    "10x4": true,
+    "10x1": true,
+    "9x1": true,
+    "9x2": true,
+    "10x2": true,
+    "7x2": true,
+    "11x1": true,
+    "11x2": true,
+    "11x3": true,
+    "11x4": true,
+    "11x5": true,
+    "14x1": true,
+    "14x2": true,
+    "14x3": true,
+    "13x1": true,
+    "13x2": true,
+    "13x3": true,
+    "4x5": true,
+    "4x4": true,
+    "4x3": true,
+    "4x2": true,
+    "4x1": true,
+    "1x5": true,
+    "1x1": true,
+    "1x2": true,
+    "1x3": true,
+    "2x1": true,
+    "2x2": true,
+    "2x3": true, 
+    "6x6": true,
+    "5x7": true,  
+    "6x7": true,
+  
+  
+  
   },
 };
 console.log(mapData.blockedSpaces)
@@ -154,9 +189,7 @@ function isSolid(x,y) {
 function getRandomSafeSpot() {
   //We don't look things up by key here, so just return an x/y
   return randomFromArray([
-    { x: 2, y: 2 },
     { x: 2, y: 4 },
-    { x: 1, y: 5 },
     { x: 2, y: 6 },
     { x: 2, y: 8 },
     { x: 2, y: 9 },
@@ -164,8 +197,6 @@ function getRandomSafeSpot() {
     { x: 5, y: 8 },
     { x: 5, y: 10 },
     { x: 5, y: 11 },
-    { x: 11, y: 7 },
-    { x: 12, y: 7 },
     { x: 13, y: 7 },
     { x: 13, y: 6 },
     { x: 13, y: 8 },
@@ -174,13 +205,15 @@ function getRandomSafeSpot() {
     { x: 7, y: 8 },
     { x: 8, y: 8 },
     { x: 8, y: 8 },
-    { x: 11, y: 4 },
     { x: 4, y: 13 },
     { x: 7, y: 1 },
-    { x: 14, y: 1 },
+    { x: 12, y: 1 },
     { x: 14, y: 14 },
     { x: 6, y: 14 },
     { x: 6, y: 12 },
+    { x: 10, y: 10 },
+    { x: 13, y: 11 },
+    
   ]);
 }
 
@@ -207,7 +240,7 @@ function getRandomSafeSpot() {
       y,
     })
 
-    const coinTimeouts = [2000, 3000, 4000, 5000];
+    const coinTimeouts = [1500,1000,500];
     setTimeout(() => {
       placeCoin();
     }, randomFromArray(coinTimeouts));
