@@ -1,3 +1,4 @@
+
 const mapData = {
   minX: 0,
   maxX: 16,
@@ -410,3 +411,4 @@ function getRandomSafeSpot() {
 
 
 })();
+
