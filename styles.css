@@ -15,11 +15,13 @@ html, body {
 
 .game-container { 
   position: relative;
-  width: 240px;
-  height: 208px;
-  background: url(/images/Imagewithobs.png) no-repeat no-repeat;
-  transform: scale(3);
-  image-rendering: pixelated;
+  width: 255px;
+  height: 255px;
+  background: url(/images/Image\ \(2\).png);
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: contain;
+  transform: scale(2.6);
 }
 
 .player-info {
@@ -98,12 +100,15 @@ button:active {
 .Character_sprite {
   overflow: hidden;
   top: -3px;
-  background: url(/images/horse.PNG);
-  height: 130% !important;
+  background: url(/images/horse.PNG) no-repeat;
+  height: 100% !important;
+  width: 100% !important;
   background-position: center;
-  background-size: cover;
+  background-size: contain;
   -webkit-transform: scaleX(-1);
-  transform: scaleX(-1);  
+  transform: scaleX=(-1); 
+  margin-top: 7.75px; 
+  border: 1px solid black;
 }
 /* .Character[data-direction="right"] .Character_sprite {
   background-position-x: 16px;
@@ -139,6 +144,7 @@ button:active {
   font-weight: bold;
   text-transform: uppercase;
   white-space: nowrap;
+  margin-top: 7.75px; 
 }
 .Character_coins {
   color: gold;
