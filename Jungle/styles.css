@@ -17,7 +17,7 @@ html, body {
   position: relative;
   width: 255px;
   height: 255px;
-  background: url(images/Image\ \(2\).png);
+  background: url(images/map2.png);
   background-repeat: no-repeat;
   background-position: center;
   background-size: contain;
@@ -100,16 +100,9 @@ button:active {
 .Character_sprite {
   overflow: hidden;
   top: -3px;
-  background: url(images/horse.PNG) no-repeat;
-  height: 100% !important;
-  width: 100% !important;
-  background-position: center;
-  background-size: contain;
-  -webkit-transform: scaleX(-1);
-  transform: scaleX=(-1); 
-  margin-top: 7.75px; 
+  background: url(images/characters.png);
 }
-/* .Character[data-direction="right"] .Character_sprite {
+.Character[data-direction="right"] .Character_sprite {
   background-position-x: 16px;
 }
 .Character[data-color="red"] .Character_sprite {
@@ -126,7 +119,7 @@ button:active {
 }
 .Character[data-color="purple"] .Character_sprite {
   background-position-y: -80px;
-} */
+}
 .Character_shadow {
   background: url(images/shadow.png) no-repeat no-repeat;
 }
@@ -155,8 +148,8 @@ button:active {
 .Coin_sprite {
   background: url(images/coin3d.PNG) no-repeat no-repeat;
   animation: coinFloat 0.8s linear infinite alternate-reverse;
-  height: 55% !important;
-  width: 55% !important;
+  height: 35% !important;
+  width: 35% !important;
   object-fit: cover;
   background-position: center;
   background-size: cover;
