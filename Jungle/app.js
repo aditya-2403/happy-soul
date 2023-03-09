@@ -360,13 +360,22 @@ function getRandomSafeSpot() {
           
 
           if(charC.innerText == 10) {
-            let textAr = document.createElement("textarea");
+            let textAr = document.createElement("p");
             textAr.className = "messageBox";
-            textAr.innerText = "great!"
+            textAr.innerText = "Well done! collect as many as coins you can"
             document.body.appendChild(textAr);
           }
-          else {
-            console.log("nope")
+          else if(charC.innerText == 20) {
+            let textAr1 = document.createElement("p");
+            textAr1.className = "messageBox1";
+            textAr1.innerText = "goooooood!"
+            document.body.appendChild(textAr1);
+          }
+          else if(charC.innerText == 50) {
+            let textAr2 = document.createElement("p");
+            textAr2.className = "messageBox2";
+            textAr2.innerText = "Go for that 100"
+            document.body.appendChild(textAr2);
           }
         }
        

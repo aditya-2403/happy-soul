@@ -1,3 +1,83 @@
+// hide the preloader once the page has loaded
+window.addEventListener("load", function() {
+  // use GSAP to fade out the preloader
+  gsap.to(".preloader", {
+    opacity: 0,
+    duration: 1,
+    ease: "power2.out",
+    delay: 1,
+    onComplete: function() {
+      // remove the preloader from the DOM once it's hidden
+      document.querySelector(".preloader").remove();
+    }
+  });
+});
+
+const coords = { x: 0, y: 0 };
+const circles = document.querySelectorAll(".circle");
+
+const colors = [
+"#ffb56b",
+"#fdaf69",
+"#f89d63",
+"#f59761",
+"#ef865e",
+"#ec805d",
+"#e36e5c",
+"#df685c",
+"#d5585c",
+"#d1525c",
+"#c5415d",
+"#c03b5d",
+"#b22c5e",
+"#ac265e",
+"#9c155f",
+"#950f5f",
+"#830060",
+"#7c0060",
+"#680060",
+"#60005f",
+"#48005f",
+"#3d005e"
+];
+
+circles.forEach(function (circle, index) {
+circle.x = 0;
+circle.y = 0;
+circle.style.backgroundColor = colors[index % colors.length];
+});
+
+window.addEventListener("mousemove", function(e){
+coords.x = e.clientX;
+coords.y = e.clientY;
+
+});
+
+function animateCircles() {
+
+let x = coords.x;
+let y = coords.y;
+
+circles.forEach(function (circle, index) {
+  circle.style.left = x - 12 + "px";
+  circle.style.top = y - 12 + "px";
+  
+  circle.style.scale = (circles.length - index) / circles.length;
+  
+  circle.x = x;
+  circle.y = y;
+
+  const nextCircle = circles[index + 1] || circles[0];
+  x += (nextCircle.x - x) * 0.3;
+  y += (nextCircle.y - y) * 0.3;
+});
+
+requestAnimationFrame(animateCircles);
+}
+
+animateCircles();
+
+
 const mapData = {
   minX: 0,
   maxX: 34,
@@ -472,6 +552,32 @@ function getRandomSafeSpot() {
         const left = 24.0294 * characterState.x + "px";
         const top = 23.84375 * characterState.y - 4 + "px";
         el.style.transform = `translate3d(${left}, ${top}, 0)`;
+
+        const messagePop = () => {
+          let charC = document.querySelector(".Character_coins");
+          
+
+          if(charC.innerText == 10) {
+            let textAr = document.createElement("p");
+            textAr.className = "messageBox";
+            textAr.innerText = "Well done! collect as many as coins you can"
+            document.body.appendChild(textAr);
+          }
+          else if(charC.innerText == 20) {
+            let textAr1 = document.createElement("p");
+            textAr1.className = "messageBox1";
+            textAr1.innerText = "goooooood!"
+            document.body.appendChild(textAr1);
+          }
+          else if(charC.innerText == 50) {
+            let textAr2 = document.createElement("p");
+            textAr2.className = "messageBox2";
+            textAr2.innerText = "Go for that 100"
+            document.body.appendChild(textAr2);
+          }
+        }
+       
+        messagePop();
       })
     })
     allPlayersRef.on("child_added", (snapshot) => {

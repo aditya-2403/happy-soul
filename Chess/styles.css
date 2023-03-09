@@ -216,3 +216,34 @@ button:active {
 .Coin_shadow {
   background: url(images/coin-shadow.png) no-repeat no-repeat;
 }
+
+.messageBox {
+  border-radius: 50px;
+  background: linear-gradient(225deg, #f0f0f0, #cacaca);
+  position: absolute;
+  left: 76%;
+  padding: 0.5rem 1rem;
+  top: 10%;
+  font-weight: 500;
+  font-size: 16px;
+}
+.messageBox1 {
+  border-radius: 50px;
+  background: linear-gradient(225deg, #f0f0f0, #cacaca);
+  position: absolute;
+  left: 76%;
+  padding: 0.5rem 1rem;
+  top: 18%;
+  font-weight: 500;
+  font-size: 16px;
+}
+.messageBox2 {
+  border-radius: 50px;
+  background: linear-gradient(225deg, #f0f0f0, #cacaca);
+  position: absolute;
+  left: 76%;
+  padding: 0.5rem 1rem;
+  top: 25.8%;
+  font-weight: 500;
+  font-size: 16px;
+}

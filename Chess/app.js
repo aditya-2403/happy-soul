@@ -321,6 +321,32 @@ function getRandomSafeSpot() {
         const left = 16 * characterState.x + "px";
         const top = 16 * characterState.y - 4 + "px";
         el.style.transform = `translate3d(${left}, ${top}, 0)`;
+
+        const messagePop = () => {
+          let charC = document.querySelector(".Character_coins");
+          
+
+          if(charC.innerText == 10) {
+            let textAr = document.createElement("p");
+            textAr.className = "messageBox";
+            textAr.innerText = "Well done! collect as many as coins you can"
+            document.body.appendChild(textAr);
+          }
+          else if(charC.innerText == 20) {
+            let textAr1 = document.createElement("p");
+            textAr1.className = "messageBox1";
+            textAr1.innerText = "goooooood!"
+            document.body.appendChild(textAr1);
+          }
+          else if(charC.innerText == 50) {
+            let textAr2 = document.createElement("p");
+            textAr2.className = "messageBox2";
+            textAr2.innerText = "Go for that 100"
+            document.body.appendChild(textAr2);
+          }
+        }
+       
+        messagePop();
       })
     })
     allPlayersRef.on("child_added", (snapshot) => {
