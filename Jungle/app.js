@@ -357,10 +357,13 @@ function getRandomSafeSpot() {
 
         const messagePop = () => {
           let charC = document.querySelector(".Character_coins");
-          let textAr = document.querySelector(".messageBox");
+          
 
           if(charC.innerText == 10) {
-            textAr.innerHTML = "Great!"
+            let textAr = document.createElement("textarea");
+            textAr.className = "messageBox";
+            textAr.innerText = "great!"
+            document.body.appendChild(textAr);
           }
           else {
             console.log("nope")
