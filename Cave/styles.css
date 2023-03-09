@@ -15,13 +15,13 @@ html, body {
 
 .game-container { 
   position: relative;
-  width: 255px;
-  height: 255px;
-  background: url(images/Image\ \(2\).png);
+  width: 817px;
+  height: 763px;
+  background: url(./images/cave.png);
   background-repeat: no-repeat;
   background-position: center;
   background-size: contain;
-  transform: scale(2.6);
+  transform: scale(0.9);
 }
 
 .player-info {
@@ -76,8 +76,8 @@ button:active {
 /* Characters */
 .grid-cell {
   position: absolute;
-  width: 16px;
-  height: 16px;
+  width: 24.0294px;
+  height: 23.84375px;
 }
 .Character {
   transition: transform 0.4s;
@@ -107,7 +107,9 @@ button:active {
   background-size: contain;
   -webkit-transform: scaleX(-1);
   transform: scaleX=(-1); 
-  margin-top: 7.75px; 
+  margin-top: 8.75px; 
+  margin-left: 1px; 
+  border: 1px solid red;
 }
 /* .Character[data-direction="right"] .Character_sprite {
   background-position-x: 16px;
@@ -149,17 +151,20 @@ button:active {
   color: gold;
   height: 50px !important;
   width: 50px !important;
+  
 }
 
 /* Coins */
 .Coin_sprite {
   background: url(images/coin3d.PNG) no-repeat no-repeat;
   animation: coinFloat 0.8s linear infinite alternate-reverse;
-  height: 55% !important;
-  width: 55% !important;
+  height: 30% !important;
+  width: 30% !important;
   object-fit: cover;
   background-position: center;
   background-size: cover;
+  margin-top: 5.75px; 
+  margin-left: 10px; 
 }
 @keyframes coinFloat {
   from { transform: translateY(0) }

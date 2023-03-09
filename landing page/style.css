@@ -169,25 +169,26 @@ main {
 .img-1:hover {
   scale: 1.3;
 }
-.img-3 {
-  background-image:
-  linear-gradient( rgba(0, 0, 0, 0.34), rgba(0, 0, 0, 0.2)),
-  url('./assests/2.jpg');
-  height: 100%;
-  border-radius: 10px;
-  transition: all 0.5s ease;
-}
-.img-3:hover {
-  scale: 1.3;
-}
 .img-2 {
   background-image:
   linear-gradient( rgba(0, 0, 0, 0.34), rgba(0, 0, 0, 0.2)),
-  url('../Chess/images/Image\ \(2\).png');
+  url('./assests/2.png');
   height: 100%;
   border-radius: 10px;
   transition: all 0.5s ease;
 }
 .img-2:hover {
+  scale: 1.3;
+}
+
+.img-3 {
+  background-image:
+  linear-gradient( rgba(0, 0, 0, 0.34), rgba(0, 0, 0, 0.2)),
+  url('./assests/3.png');
+  height: 100%;
+  border-radius: 10px;
+  transition: all 0.5s ease;
+}
+.img-3:hover {
   scale: 1.3;
 }

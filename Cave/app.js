@@ -1,8 +1,8 @@
 const mapData = {
   minX: 0,
-  maxX: 16,
+  maxX: 34,
   minY: 0,
-  maxY: 16,
+  maxY: 32,
   blockedSpaces: {
     "0x0": true,
     "0x1": true,
@@ -15,75 +15,278 @@ const mapData = {
     "0x8": true,
     "0x9": true,
     "0x10": true,
-    "0x11": true,
-    "0x12": true,
-    "0x13": true,
-    "0x14": true,
-    "0x15": true,
-    
-    "0x0": true,
+
     "1x0": true,
-    "2x0": true,
-    "3x0": true,
-    "4x0": true,
-    "5x0": true,
-    "6x0": true,
-    "7x0": true,
-    "8x0": true,
-    "9x0": true,
-    "10x0": true,
-    "11x0": true,
-    "12x0": true,
-    "13x0": true,
-    "14x0": true,
-    "15x0": true,
-
-    "15x0": true,
-    "15x1": true,
-    "15x2": true,
-    "15x3": true,
-    "15x4": true,
-    "15x5": true,
-    "15x6": true,
-    "15x7": true,
-    "15x8": true,
-    "15x9": true,
-    "15x10": true,
-    "15x11": true,
-    "15x12": true,
-    "15x13": true,
-    "15x14": true,
-    "15x15": true,
-
-    "0x15": true,
-    "1x15": true,
-    "2x15": true,
-    "3x15": true,
-    "4x15": true,
-    "5x15": true,
-    "6x15": true,
-    "7x15": true,
-    "8x15": true,
-    "9x15": true,
-    "10x15": true,
-    "11x15": true,
-    "12x15": true,
-    "13x15": true,
-    "14x15": true,
-    "15x15": true,
-
+    "1x1": true,
+    "1x2": true,
+    "1x3": true,
     "1x4": true,
-    "5x3": true,
-    "6x3": true,
-    "12x3": true,
-    "12x6": true,
-    "11x6": true,
-    "10x8": true,
-    "4x8": true,
-    "6x11": true,
-    "7x11": true,
+    "1x5": true,
+    "1x6": true,
+    "1x7": true,
+    "1x8": true,
+    "1x9": true,
     "1x10": true,
-    "14x8": true,
+
+    "2x0": true,
+    "2x1": true,
+    "2x2": true,
+    "2x3": true,
+    "2x4": true,
+    "2x5": true,
+    "2x6": true,
+    "2x7": true,
+    "2x8": true,
+    "2x9": true,
+    "2x10": true,
+
+    "3x3": true,
+    "3x4": true,
+    "3x5": true,
+    "3x6": true,
+    "3x7": true,
+    "3x8": true,
+    "3x9": true,
+    "3x10": true,
+
+    "5x3": true,
+    "5x4": true,
+    "5x5": true,
+    "5x6": true,
+    "5x7": true,
+    "5x8": true,
+    "5x9": true,
+    "5x10": true,
+
+    "11x0": true,
+    "11x1": true,
+    "11x2": true,
+    "11x3": true,
+    "12x0": true,
+    "12x1": true,
+    "12x2": true,
+    "12x3": true,
+    
+    "6x3": true,
+    "7x3": true,
+    "8x3": true,
+    "9x3": true,
+    "10x3": true,
+
+    "6x10": true,
+    "7x11": true,
+    "7x12": true,
+    "7x13": true,
+    "7x14": true,
+    "7x15": true,
+    "7x16": true,
+    "7x17": true,
+    "7x18": true,
+
+    "8x18": true,
+    "9x18": true,
+    "10x19": true,
+    "10x20": true,
+    "10x21": true,
+    "10x22": true,
+    "10x23": true,
+    "10x24": true,
+    "10x25": true,
+    "10x26": true,
+    "10x27": true,
+    "10x28": true,
+    "10x29": true,
+    "11x21": true,
+    "12x21": true,
+    "11x21": true,
+    "11x21": true,
+    "12x20": true,
+    "12x19": true,
+    "12x18": true,
+    "12x17": true,
+    "12x16": true,
+    "12x15": true,
+    "12x14": true,
+    "12x13": true,
+    "12x12": true,
+    "12x11": true,
+    "12x10": true,
+    "12x9": true,
+    "10x8": true,
+    "10x7": true,
+    "10x6": true,
+    "10x5": true,
+    "10x4": true,
+    "14x0": true,
+    "14x1": true,
+    "14x2": true,
+    "15x2": true,
+    "16x2": true,
+    "17x2": true,
+    "18x3": true,
+    "18x4": true,
+    "18x5": true,
+    "18x6": true,
+    "18x7": true,
+    "18x8": true,
+    "18x9": true,
+    "18x10": true,
+    "18x11": true,
+    "18x12": true,
+    "16x13": true,    
+    "16x12": true,
+    "16x11": true,
+    "16x10": true,
+    "16x9": true,
+    "15x13": true,
+    "14x12": true,
+    "14x13": true,
+    "14x12": true,
+    "14x11": true,
+    "14x10": true,
+    "14x9": true,
+    "15x9": true,
+    "19x12": true,
+    "19x11": true,
+    "19x10": true,
+    "19x9": true,
+    "19x8": true,
+    "19x7": true,
+    "19x6": true,
+    "19x5": true,
+    "19x4": true,
+    "19x3": true,
+    "19x2": true,
+    "19x1": true,
+    "19x0": true,
+    "21x0": true,
+    "21x1": true,
+    "21x2": true,
+    "21x3": true,
+    "21x4": true,
+    "22x4": true,
+    "23x4": true,
+    "24x4": true,
+    "25x4": true,
+    "26x4": true,
+    "27x4": true,
+    "27x3": true,
+    "27x2": true,
+    "27x1": true,
+    "27x0": true,
+    "29x0": true,
+    "30x0": true,
+    "31x0": true,
+    "32x0": true,
+    "33x0": true,
+    "29x3": true,
+    "29x2": true,
+    "30x2": true,
+    "31x2": true,
+    "32x2": true,
+    "33x2": true,
+    "29x4": true,
+    "29x5": true,
+    "29x6": true,
+    "29x7": true,
+    "29x8": true,
+    "29x9": true,
+    "30x9": true,
+    "31x9": true,
+    "32x9": true,
+    "33x9": true,
+    "33x11": true,
+    "32x11": true,
+    "31x11": true,
+    "31x12": true,
+    "31x13": true,
+    "31x14": true,
+    "31x15": true,
+    "31x16": true,
+    "31x17": true,
+    "32x18": true,
+    "33x19": true,
+    "33x20": true,
+    "33x21": true,
+    "33x22": true,
+    "33x23": true,
+    "33x24": true,
+    "33x25": true,
+    "33x26": true,
+    "33x28": true,
+    "32x28": true,
+    "32x29": true,
+    "32x30": true,
+    "32x31": true,
+    "27x31": true,
+    "26x31": true,
+    "26x30": true,
+    "26x29": true,
+    "26x28": true,
+    "27x30": true,
+    "27x29": true,
+    "27x28": true,
+    "28x26": true,
+    "28x25": true,
+    "28x24": true,
+    "28x23": true,
+    "28x22": true,
+    "28x21": true,
+    "28x20": true,
+    "28x19": true,
+    "27x19": true,
+    "26x19": true,
+    "25x19": true,
+    "24x19": true,
+    "23x19": true,
+    "22x19": true,
+    "21x20": true,
+    "20x20": true,
+    "19x20": true,
+    "19x21": true,
+    "19x22": true,
+    "19x23": true,
+    "19x24": true,
+    "19x25": true,
+    "19x26": true,
+    "19x27": true,
+    "20x27": true,
+    "20x26": true,
+    "21x26": true,
+    "22x26": true,
+    "23x26": true,
+    "24x26": true,
+    "25x26": true,
+    "26x26": true,
+    "27x26": true,
+   
+   
+
+
+    
+
+
+    
+    
+    
+    
+    
+    
+    
+
+    
+    
+    
+    
+    
+
+
+    
+    
+    
+ 
+
+    
     
   },
 };
@@ -154,33 +357,35 @@ function isSolid(x,y) {
 function getRandomSafeSpot() {
   //We don't look things up by key here, so just return an x/y
   return randomFromArray([
-    { x: 2, y: 2 },
-    { x: 2, y: 4 },
-    { x: 1, y: 5 },
-    { x: 2, y: 6 },
-    { x: 2, y: 8 },
-    { x: 2, y: 9 },
-    { x: 5, y: 5 },
-    { x: 5, y: 8 },
-    { x: 5, y: 10 },
-    { x: 5, y: 11 },
-    { x: 11, y: 7 },
-    { x: 12, y: 7 },
-    { x: 13, y: 7 },
-    { x: 13, y: 6 },
-    { x: 13, y: 8 },
-    { x: 7, y: 6 },
-    { x: 7, y: 7 },
-    { x: 7, y: 8 },
-    { x: 8, y: 8 },
-    { x: 8, y: 8 },
-    { x: 11, y: 4 },
-    { x: 4, y: 13 },
-    { x: 7, y: 1 },
-    { x: 14, y: 1 },
-    { x: 14, y: 14 },
-    { x: 6, y: 14 },
-    { x: 6, y: 12 },
+    { x: 21, y: 8},
+
+    // { x: 2, y: 4 },
+    // { x: 1, y: 5 },
+    // { x: 2, y: 6 },
+    // { x: 2, y: 8 },
+    // { x: 2, y: 9 },
+    // { x: 5, y: 5 },
+    // { x: 5, y: 8 },
+    // { x: 5, y: 10 },
+    // { x: 5, y: 11 },
+    // { x: 11, y: 7 },
+    // { x: 12, y: 7 },
+    // { x: 13, y: 7 },
+    // { x: 13, y: 6 },
+    // { x: 13, y: 8 },
+    // { x: 7, y: 6 },
+    // { x: 7, y: 7 },
+    // { x: 7, y: 8 },
+    // { x: 8, y: 8 },
+    // { x: 8, y: 8 },
+    // { x: 11, y: 4 },
+    // { x: 4, y: 13 },
+    // { x: 7, y: 1 },
+    // { x: 14, y: 1 },
+    // { x: 14, y: 14 },
+    // { x: 6, y: 14 },
+    // { x: 6, y: 12 },
+    // { x: 30, y: 30 },
   ]);
 }
 
@@ -207,7 +412,7 @@ function getRandomSafeSpot() {
       y,
     })
 
-    const coinTimeouts = [2000, 3000, 4000, 5000];
+    const coinTimeouts = [00];
     setTimeout(() => {
       placeCoin();
     }, randomFromArray(coinTimeouts));
@@ -264,8 +469,8 @@ function getRandomSafeSpot() {
         el.querySelector(".Character_coins").innerText = characterState.coins;
         el.setAttribute("data-color", characterState.color);
         el.setAttribute("data-direction", characterState.direction);
-        const left = 16 * characterState.x + "px";
-        const top = 16 * characterState.y - 4 + "px";
+        const left = 24.0294 * characterState.x + "px";
+        const top = 23.84375 * characterState.y - 4 + "px";
         el.style.transform = `translate3d(${left}, ${top}, 0)`;
       })
     })
@@ -293,8 +498,8 @@ function getRandomSafeSpot() {
       characterElement.querySelector(".Character_coins").innerText = addedPlayer.coins;
       characterElement.setAttribute("data-color", addedPlayer.color);
       characterElement.setAttribute("data-direction", addedPlayer.direction);
-      const left = 16 * addedPlayer.x + "px";
-      const top = 16 * addedPlayer.y - 4 + "px";
+      const left = 24.0294 * addedPlayer.x + "px";
+      const top = 23.84375 * addedPlayer.y - 4 + "px";
       characterElement.style.transform = `translate3d(${left}, ${top}, 0)`;
       gameContainer.appendChild(characterElement);
     })
@@ -329,8 +534,8 @@ function getRandomSafeSpot() {
       `;
 
       // Position the Element
-      const left = 16 * coin.x + "px";
-      const top = 16 * coin.y - 4 + "px";
+      const left = 24.0294 * coin.x + "px";
+      const top = 23.84375 * coin.y  + "px";
       coinElement.style.transform = `translate3d(${left}, ${top}, 0)`;
 
       // Keep a reference for removal later and add to DOM
