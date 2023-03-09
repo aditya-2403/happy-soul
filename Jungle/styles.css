@@ -204,3 +204,12 @@ button:active {
 .Coin_shadow {
   background: url(images/coin-shadow.png) no-repeat no-repeat;
 }
+
+.messageBox {
+  border-radius: 5px;
+  background: linear-gradient(225deg, #f0f0f0, #cacaca);
+  position: absolute;
+  right: 2.5%;
+  top: 10%;
+  padding: 0 !important;
+}

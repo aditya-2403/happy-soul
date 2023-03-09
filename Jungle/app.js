@@ -354,6 +354,20 @@ function getRandomSafeSpot() {
         const left = 16 * characterState.x + "px";
         const top = 16 * characterState.y - 4 + "px";
         el.style.transform = `translate3d(${left}, ${top}, 0)`;
+
+        const messagePop = () => {
+          let charC = document.querySelector(".Character_coins");
+          let textAr = document.querySelector(".messageBox");
+
+          if(charC.innerText == 10) {
+            textAr.innerHTML = "Great!"
+          }
+          else {
+            console.log("nope")
+          }
+        }
+       
+        messagePop();
       })
     })
     allPlayersRef.on("child_added", (snapshot) => {
@@ -497,3 +511,4 @@ function getRandomSafeSpot() {
 
 
 })();
+
