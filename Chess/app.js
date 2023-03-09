@@ -1,3 +1,5 @@
+window.addEventListener("keyup", function(e){ if(e.keyCode == 27) history.back(); }, false);
+
 const coords = { x: 0, y: 0 };
 const circles = document.querySelectorAll(".circle");
 
