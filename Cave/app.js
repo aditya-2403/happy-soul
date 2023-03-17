@@ -326,7 +326,91 @@ const mapData = {
     "25x26": true,
     "26x26": true,
     "27x26": true,
+    
+
+    "14x19": true,
+    "15x19": true,
+    "16x19": true,
+    "14x20": true,
+    "15x20": true,
+    "16x20": true,
+    "17x19": true,
+    "17x20": true,
+    "17x21": true,
+    "17x22": true,
+    "17x23": true,
+    "17x24": true,
+    "17x25": true,
+    "17x26": true,
+    "17x27": true,
+    "17x28": true,
+    "17x29": true,
+    "17x30": true,
+    "17x31": true,
+
+    "19x29": true,
+    "19x30": true,
+    "20x29": true,
+    "20x30": true,
+
+    "24x14": true,
+    "24x13": true,
+    "24x12": true,
+    "24x11": true,
+
+    "23x14": true,
+    "23x13": true,
+    "23x12": true,
+    "23x11": true,
+
+    "22x15": true,
+    "22x16": true,
+    "22x17": true,
+
+    "23x15": true,
+    "23x16": true,
+    "23x17": true,
+    "24x15": true,
+    "24x16": true,
+    "24x17": true,
    
+    "0x17": true,
+    "1x17": true,
+    "2x17": true,
+    "3x17": true,
+    "4x17": true,
+    "5x17": true,
+    "5x18": true,
+    "5x19": true,
+    "4x19": true,
+    "3x19": true,
+    "2x19": true,
+
+    "1x20": true,
+    "1x21": true,
+    "1x22": true,
+    "1x23": true,
+    "1x24": true,
+    "1x25": true,
+    "1x26": true,
+
+    "2x27": true,
+    "3x27": true,
+    "4x27": true,
+    "5x27": true,
+    "6x27": true,
+    "7x27": true,
+    "8x27": true,
+
+    "8x27": true,
+    "8x28": true,
+    "8x29": true,
+    "8x30": true,
+    "8x31": true,
+
+    "11x9": true,
+    
+    
    
 
 
@@ -424,7 +508,7 @@ function isSolid(x,y) {
 function getRandomSafeSpot() {
   //We don't look things up by key here, so just return an x/y
   return randomFromArray([
-    { x: 21, y: 8},
+    { x: 0, y: 16},
 
     // { x: 2, y: 4 },
     // { x: 1, y: 5 },
