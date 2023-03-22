@@ -80,6 +80,7 @@ html, body {
 label {
   display: block;
   font-weight: bold;
+  color: white;
 }
 
 input[type="text"],
@@ -143,7 +144,10 @@ button:active {
 .Character_sprite {
   overflow: hidden;
   top: -3px;
-  background: url(images/characters.png);
+  height: 320px;
+  width: 320px;
+  zoom: 0.05;
+  background: url(images/Doge.png);
 }
 .Character[data-direction="right"] .Character_sprite {
   background-position-x: 16px;

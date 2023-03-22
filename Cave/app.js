@@ -743,11 +743,11 @@ function getRandomSafeSpot() {
       document.addEventListener("keydown", function(event) {
         if (event.key === "ArrowLeft") {
           const some = document.querySelector(".Character_sprite");
-          some.style.transform = "scaleX(1)"
+          some.style.transform = "scaleX(-1)"
         }
        else if (event.key === "ArrowRight") {
           const some = document.querySelector(".Character_sprite");
-          some.style.transform = "scaleX(-1)"
+          some.style.transform = "scaleX(1)"
         }
       });
       //Fill in some initial state
