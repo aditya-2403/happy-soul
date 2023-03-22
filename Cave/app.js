@@ -698,22 +698,22 @@ function getRandomSafeSpot() {
           let charC = document.querySelector(".Character_coins");
           
 
-          if(charC.innerText == 10) {
+          if(charC.innerText == 15) {
             let textAr = document.createElement("p");
             textAr.className = "messageBox";
-            textAr.innerText = "Well done! collect as many as coins you can"
+            textAr.innerText = "Only 15!! go for more"
             document.body.appendChild(textAr);
           }
-          else if(charC.innerText == 20) {
+          else if(charC.innerText == 30) {
             let textAr1 = document.createElement("p");
             textAr1.className = "messageBox1";
-            textAr1.innerText = "goooooood!"
+            textAr1.innerText = "Good Progress! but you can do better"
             document.body.appendChild(textAr1);
           }
-          else if(charC.innerText == 50) {
+          else if(charC.innerText == 45) {
             let textAr2 = document.createElement("p");
             textAr2.className = "messageBox2";
-            textAr2.innerText = "Go for that 100"
+            textAr2.innerText = "Okay! thats some Capstone worthy performance"
             document.body.appendChild(textAr2);
           }
         }
@@ -740,6 +740,16 @@ function getRandomSafeSpot() {
       `);
       playerElements[addedPlayer.id] = characterElement;
 
+      document.addEventListener("keydown", function(event) {
+        if (event.key === "ArrowLeft") {
+          const some = document.querySelector(".Character_sprite");
+          some.style.transform = "scaleX(1)"
+        }
+       else if (event.key === "ArrowRight") {
+          const some = document.querySelector(".Character_sprite");
+          some.style.transform = "scaleX(-1)"
+        }
+      });
       //Fill in some initial state
       characterElement.querySelector(".Character_name").innerText = addedPlayer.name;
       characterElement.querySelector(".Character_coins").innerText = addedPlayer.coins;
@@ -862,3 +872,8 @@ function getRandomSafeSpot() {
 
 
 })();
+
+
+document.addEventListener("keydown", function(event) {
+  console.log(event.key);
+});
