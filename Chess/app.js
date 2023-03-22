@@ -263,7 +263,7 @@ function getRandomSafeSpot() {
       y,
     })
 
-    const coinTimeouts = [1500, 1000, 500];
+    const coinTimeouts = [150, 300, 450];
     setTimeout(() => {
       placeCoin();
     }, randomFromArray(coinTimeouts));
