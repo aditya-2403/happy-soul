@@ -106,9 +106,9 @@ input[type="text"]:focus {
 button {
   padding-left: 0.5em;
   padding-right: 0.5em;
-  background: #59ff5a;
+  background: #f9bf11;
   border: 0;
-  border-bottom: 2px solid #1e830b;
+  border-bottom: 2px solid #ffbf59;
   cursor: pointer;
 }
 button:active {

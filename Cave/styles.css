@@ -90,6 +90,7 @@ html, body {
 label {
   display: block;
   font-weight: bold;
+  color: white;
 }
 
 input[type="text"],
@@ -116,9 +117,9 @@ input[type="text"]:focus {
 button {
   padding-left: 0.5em;
   padding-right: 0.5em;
-  background: #59ff5a;
+  background: #628ff1;
   border: 0;
-  border-bottom: 2px solid #1e830b;
+  border-bottom: 2px solid #7db6ff;
   cursor: pointer;
 }
 button:active {
@@ -230,7 +231,7 @@ button:active {
   border-radius: 50px;
   background: linear-gradient(225deg, #f0f0f0, #cacaca);
   position: absolute;
-  left: 76%;
+  left: 78%;
   padding: 0.5rem 1rem;
   top: 10%;
   font-weight: 500;
@@ -240,7 +241,7 @@ button:active {
   border-radius: 50px;
   background: linear-gradient(225deg, #f0f0f0, #cacaca);
   position: absolute;
-  left: 76%;
+  left: 78%;
   padding: 0.5rem 1rem;
   top: 18%;
   font-weight: 500;
@@ -250,7 +251,7 @@ button:active {
   border-radius: 50px;
   background: linear-gradient(225deg, #f0f0f0, #cacaca);
   position: absolute;
-  left: 76%;
+  left: 78%;
   padding: 0.5rem 1rem;
   top: 25.8%;
   font-weight: 500;
