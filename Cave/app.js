@@ -411,29 +411,7 @@ const mapData = {
     "11x9": true,
     
     
-   
 
-
-    
-
-
-    
-    
-    
-    
-    
-    
-    
-
-    
-    
-    
-    
-    
-
-
-    
-    
     
  
 
@@ -442,8 +420,7 @@ const mapData = {
   },
 };
 console.log(mapData.blockedSpaces)
-// Options for Player Colors... these are in the same order as our sprite sheet
-const playerColors = ["blue", "red", "orange", "yellow", "green", "purple"];
+
 
 //Misc Helpers
 function randomFromArray(array) {
@@ -622,7 +599,7 @@ function getRandomSafeSpot() {
 
   const gameContainer = document.querySelector(".game-container");
   const playerNameInput = document.querySelector("#player-name");
-  const playerColorButton = document.querySelector("#player-color");
+  
 
 
   function placeCoin() {
@@ -685,10 +662,10 @@ function getRandomSafeSpot() {
       Object.keys(players).forEach((key) => {
         const characterState = players[key];
         let el = playerElements[key];
-        // Now update the DOM
+        // For updating the DOM
         el.querySelector(".Character_name").innerText = characterState.name;
         el.querySelector(".Character_coins").innerText = characterState.coins;
-        el.setAttribute("data-color", characterState.color);
+        
         el.setAttribute("data-direction", characterState.direction);
         const left = 24.0294 * characterState.x + "px";
         const top = 23.84375 * characterState.y - 4 + "px";
@@ -753,7 +730,6 @@ function getRandomSafeSpot() {
       //Fill in some initial state
       characterElement.querySelector(".Character_name").innerText = addedPlayer.name;
       characterElement.querySelector(".Character_coins").innerText = addedPlayer.coins;
-      characterElement.setAttribute("data-color", addedPlayer.color);
       characterElement.setAttribute("data-direction", addedPlayer.direction);
       const left = 24.0294 * addedPlayer.x + "px";
       const top = 23.84375 * addedPlayer.y - 4 + "px";
@@ -816,14 +792,7 @@ function getRandomSafeSpot() {
       })
     })
 
-    //Update player color on button click
-    playerColorButton.addEventListener("click", () => {
-      const mySkinIndex = playerColors.indexOf(players[playerId].color);
-      const nextColor = playerColors[mySkinIndex + 1] || playerColors[0];
-      playerRef.update({
-        color: nextColor
-      })
-    })
+    
 
     //Place my first coin
     placeCoin();
@@ -847,7 +816,6 @@ function getRandomSafeSpot() {
         id: playerId,
         name,
         direction: "right",
-        color: randomFromArray(playerColors),
         x,
         y,
         coins: 0,
