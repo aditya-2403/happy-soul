@@ -290,6 +290,7 @@ function getRandomSafeSpot() {
   let playerElements = {};
   let coins = {};
   let coinElements = {};
+  let isFrozen = false;
 
   const gameContainer = document.querySelector(".game-container");
   const playerNameInput = document.querySelector("#player-name");
@@ -315,9 +316,59 @@ function getRandomSafeSpot() {
     if (coins[key]) {
       // Remove this key from data, then uptick Player's coin count
       firebase.database().ref(`coins/${key}`).remove();
-      playerRef.update({
-        coins: players[playerId].coins + 1,
-      })
+      const randomChance = Math.random(); // Random value between 0 and 1
+      console.log(isFrozen);
+
+      if (randomChance < 0.2) { // 20% chance of freezing the player
+        // Freeze the player for 10 seconds
+        const popup = document.createElement("div");
+        popup.innerText = "FROZEN";
+        popup.style.position = "fixed";
+        popup.style.bottom = "20px"; // Adjust as needed
+        popup.style.left = "50%";
+        popup.style.transform = "translateX(-50%)";
+        popup.style.backgroundColor = "rgba(255, 255, 255, 0.7)";
+        popup.style.padding = "20px";
+        document.body.appendChild(popup);
+        isFrozen = true;
+        // Display a message or perform an action indicating the player is frozen
+  
+        // After 10 seconds, unfreeze the player
+        setTimeout(() => {
+          document.body.removeChild(popup);
+          isFrozen = false;
+          // Optionally, remove the message or reset any visual indicator of being frozen
+        }, 10000); // 10 seconds in milliseconds
+      }
+  
+      if (randomChance > 0.8) { // 30% chance
+        playerRef.update({
+          coins: players[playerId].coins + 30, // Update player's score by 30
+        });
+        {
+          // Show a popup encouraging the player to gather at least 40 points
+          const popup = document.createElement("div");
+      popup.innerText = "+30 COINS";
+      popup.style.position = "fixed";
+      popup.style.bottom = "20px"; // Adjust as needed
+      popup.style.left = "50%";
+      popup.style.transform = "translateX(-50%)";
+      popup.style.backgroundColor = "rgba(255, 255, 255, 0.7)";
+      popup.style.padding = "20px";
+      document.body.appendChild(popup);
+  
+          // Hide the popup after 4 seconds
+          setTimeout(() => {
+            document.body.removeChild(popup);
+          }, 1000);
+        }
+      }      
+      else {
+        
+        playerRef.update({
+          coins: players[playerId].coins + 1, // Update player's score by 1 normally
+        });
+      }
     }
   }
 
@@ -325,6 +376,12 @@ function getRandomSafeSpot() {
   function handleArrowPress(xChange=0, yChange=0) {
     const newX = players[playerId].x + xChange;
     const newY = players[playerId].y + yChange;
+
+    if (isFrozen) {
+      // Player is frozen, don't allow movement
+      return;
+    }
+
     if (!isSolid(newX, newY)) {
       //move to the next space
       players[playerId].x = newX;
