@@ -628,8 +628,9 @@ function getRandomSafeSpot() {
       firebase.database().ref(`coins/${key}`).remove();
       const randomChance = Math.random(); // Random value between 0 and 1
       console.log(isFrozen);
-
-      if (randomChance < 0) { // 20% chance of freezing the player
+      const randomChance2 = Math.random(); // Random value between 0 and 1
+      if (randomChance2 <0.3){
+      if (randomChance < 0.2) { // 20% chance of freezing the player
         // Freeze the player for 10 seconds
         const popup = document.createElement("div");
         popup.innerText = "FROZEN";
@@ -648,7 +649,7 @@ function getRandomSafeSpot() {
           document.body.removeChild(popup);
           isFrozen = false;
           // Optionally, remove the message or reset any visual indicator of being frozen
-        }, 10000); // 10 seconds in milliseconds
+        }, 5000); // 10 seconds in milliseconds
       }
   
       if (randomChance > 0.8) { // 30% chance
@@ -673,6 +674,7 @@ function getRandomSafeSpot() {
           }, 1000);
         }
       }      
+    }
       else {
         
         playerRef.update({

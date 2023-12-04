@@ -318,9 +318,10 @@ function getRandomSafeSpot() {
       firebase.database().ref(`coins/${key}`).remove();
       const randomChance = Math.random(); // Random value between 0 and 1
       console.log(isFrozen);
-
+      const randomChance2 = Math.random(); // Random value between 0 and 1
+      if (randomChance2 <0.3){
       if (randomChance < 0.2) { // 20% chance of freezing the player
-        // Freeze the player for 10 seconds
+        // Freeze the player for 5 seconds
         const popup = document.createElement("div");
         popup.innerText = "FROZEN";
         popup.style.position = "fixed";
@@ -338,7 +339,7 @@ function getRandomSafeSpot() {
           document.body.removeChild(popup);
           isFrozen = false;
           // Optionally, remove the message or reset any visual indicator of being frozen
-        }, 10000); // 10 seconds in milliseconds
+        }, 5000); // 5 seconds in milliseconds
       }
   
       if (randomChance > 0.8) { // 30% chance
@@ -363,6 +364,7 @@ function getRandomSafeSpot() {
           }, 1000);
         }
       }      
+    }
       else {
         
         playerRef.update({
@@ -398,13 +400,13 @@ function getRandomSafeSpot() {
 
     if (isPlayerAtNextMap(newX, newY)) {
       // Player reached 14x14, navigate to the next map
-      if (players[playerId].coins >= 40) {
+      if (players[playerId].coins >= 80) {
         // Player has over 40 points, navigate to the next map
         window.location.href = "../Chess/index.html"; // Change "next_map.html" to the desired next map URL
       } else {
         // Show a popup encouraging the player to gather at least 40 points
         const popup = document.createElement("div");
-        popup.innerText = "Gather at least 40 points to proceed!";
+        popup.innerText = "Gather at least 80 points to proceed!";
         popup.style.position = "fixed";
         popup.style.top = "50%";
         popup.style.left = "50%";
@@ -421,13 +423,13 @@ function getRandomSafeSpot() {
 
       if (isPlayerAtNextMap2(newX, newY)) {
         // Player reached 14x14, navigate to the next map
-        if (players[playerId].coins >= 40) {
+        if (players[playerId].coins >= 80) {
           // Player has over 40 points, navigate to the next map
           window.location.href = "../Cave/index.html"; // Change "next_map.html" to the desired next map URL
         } else {
           // Show a popup encouraging the player to gather at least 40 points
           const popup = document.createElement("div");
-          popup.innerText = "Gather at least 40 points to proceed!";
+          popup.innerText = "Gather at least 80 points to proceed!";
           popup.style.position = "fixed";
           popup.style.top = "50%";
           popup.style.left = "50%";
