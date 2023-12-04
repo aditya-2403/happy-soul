@@ -715,14 +715,14 @@ function getRandomSafeSpot() {
       } else {
         // Show a popup encouraging the player to gather at least 40 points
         const popup = document.createElement("div");
-        popup.innerText = "Gather at least 40 points to proceed!";
+        popup.innerText = "Gather at least 80 points to proceed!";
         popup.style.position = "fixed";
-        popup.style.top = "50%";
-        popup.style.left = "50%";
-        popup.style.transform = "translate(-50%, -50%)";
-        popup.style.backgroundColor = "#fff";
-        popup.style.padding = "20px";
-        document.body.appendChild(popup);
+      popup.style.bottom = "20px"; // Adjust as needed
+      popup.style.left = "50%";
+      popup.style.transform = "translateX(-50%)";
+      popup.style.backgroundColor = "rgba(255, 255, 255, 0.7)";
+      popup.style.padding = "20px";
+      document.body.appendChild(popup);
 
         // Hide the popup after 4 seconds
         setTimeout(() => {

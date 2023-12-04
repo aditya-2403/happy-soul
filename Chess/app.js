@@ -381,7 +381,6 @@ function getRandomSafeSpot() {
         popup.style.backgroundColor = "rgba(255, 255, 255, 0.7)";
         popup.style.padding = "20px";
         document.body.appendChild(popup);
-
         // Hide the popup after 4 seconds
         setTimeout(() => {
           document.body.removeChild(popup);
