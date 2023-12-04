@@ -154,7 +154,6 @@ const mapData = {
     "11x5": true,
     "14x1": true,
     "14x2": true,
-    "14x3": true,
     "13x1": true,
     "13x2": true,
     "13x3": true,
@@ -169,7 +168,6 @@ const mapData = {
     "1x3": true,
     "2x1": true,
     "2x2": true,
-    "2x3": true, 
     "6x6": true,
     "5x7": true,  
     "6x7": true,
@@ -178,6 +176,16 @@ const mapData = {
   
   },
 };
+
+// Function to check if the player is at 14x14 position on the map
+function isPlayerAtNextMap(x, y) {
+  return x === 2 && y === 3;
+}
+
+// Function to check if the player is at 14x14 position on the map
+function isPlayerAtNextMap2(x, y) {
+  return x === 14 && y === 3;
+}
 console.log(mapData.blockedSpaces)
 // Options for Player Colors... these are in the same order as our sprite sheet
 const playerColors = ["blue", "red", "orange", "yellow", "green", "purple"];
@@ -330,6 +338,52 @@ function getRandomSafeSpot() {
       playerRef.set(players[playerId]);
       attemptGrabCoin(newX, newY);
     }
+
+    if (isPlayerAtNextMap(newX, newY)) {
+      // Player reached 14x14, navigate to the next map
+      if (players[playerId].coins >= 40) {
+        // Player has over 40 points, navigate to the next map
+        window.location.href = "../Chess/index.html"; // Change "next_map.html" to the desired next map URL
+      } else {
+        // Show a popup encouraging the player to gather at least 40 points
+        const popup = document.createElement("div");
+        popup.innerText = "Gather at least 40 points to proceed!";
+        popup.style.position = "fixed";
+        popup.style.top = "50%";
+        popup.style.left = "50%";
+        popup.style.transform = "translate(-50%, -50%)";
+        popup.style.backgroundColor = "#fff";
+        popup.style.padding = "20px";
+        document.body.appendChild(popup);
+
+        // Hide the popup after 4 seconds
+        setTimeout(() => {
+          document.body.removeChild(popup);
+        }, 4000);
+      } }
+
+      if (isPlayerAtNextMap2(newX, newY)) {
+        // Player reached 14x14, navigate to the next map
+        if (players[playerId].coins >= 40) {
+          // Player has over 40 points, navigate to the next map
+          window.location.href = "../Cave/index.html"; // Change "next_map.html" to the desired next map URL
+        } else {
+          // Show a popup encouraging the player to gather at least 40 points
+          const popup = document.createElement("div");
+          popup.innerText = "Gather at least 40 points to proceed!";
+          popup.style.position = "fixed";
+          popup.style.top = "50%";
+          popup.style.left = "50%";
+          popup.style.transform = "translate(-50%, -50%)";
+          popup.style.backgroundColor = "#fff";
+          popup.style.padding = "20px";
+          document.body.appendChild(popup);
+  
+          // Hide the popup after 4 seconds
+          setTimeout(() => {
+            document.body.removeChild(popup);
+          }, 4000);
+        } }
   }
 
   function initGame() {
