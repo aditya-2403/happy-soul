@@ -160,7 +160,7 @@ main {
 .img-1 {
   background-image:
   linear-gradient( rgba(0, 0, 0, 0.34), rgba(0, 0, 0, 0.2)),
-  url('./assests/1.jpeg');
+  url('/assests/1.jpeg');
   height: 100%;
   border-radius: 10px;
   scale: 1;
@@ -172,7 +172,7 @@ main {
 .img-2 {
   background-image:
   linear-gradient( rgba(0, 0, 0, 0.34), rgba(0, 0, 0, 0.2)),
-  url('./assests/2.png');
+  url('/assests/2.png');
   height: 100%;
   border-radius: 10px;
   transition: all 0.5s ease;
@@ -184,7 +184,7 @@ main {
 .img-3 {
   background-image:
   linear-gradient( rgba(0, 0, 0, 0.34), rgba(0, 0, 0, 0.2)),
-  url('./assests/3.png');
+  url('/assests/3.png');
   height: 100%;
   border-radius: 10px;
   transition: all 0.5s ease;
